@@ -1,0 +1,259 @@
+body {
+    background-color: #f5f7fa;
+    color: #333;
+}
+header {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 15px 20px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.toggle-container {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Theme Toggle Switch */
+.checkbox {
+    opacity: 0;
+    position: absolute;
+    display: none !important;
+}
+
+.checkbox-label {
+    background-color: #111;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+}
+
+/* Article Card Styles */
+.article-card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin: 6px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    max-width: 300px;
+    width: 100%;
+}
+
+/* Hover Effect for Article Cards */
+.article-card:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+h5 {
+    color: #333;
+}
+
+.article-card p, .article-card small {
+    color: #ffffff;
+}
+
+.article-card button {
+    background-color: #0066cc;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.article-card button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.article-card button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+/* Adjustments for Light Mode */
+body:not(.dark-theme) .article-card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+body:not(.dark-theme) .article-card h5, 
+body:not(.dark-theme) .article-card p,
+body:not(.dark-theme) .article-card small {
+    color: #333333;
+}
+
+/* Button Styles */
+button.btn-primary {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+button.btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+button:focus, a:focus {
+    outline: 3px solid #f39c12;
+}
+
+/* Zoom Effect for Article */
+.zoomed-in {
+    transform: scale(1.5);
+    z-index: 999;
+    transition: transform 0.3s ease, z-index 0s linear 0.3s;
+    position: relative;
+}
+
+/* Close Button for Zoomed-In Article */
+.zoom-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+footer a {
+    color: #ecf0f1;
+}
+
+/* Dark Theme */
+.dark-theme body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-theme header {
+    background-color: #1f2933;
+}
+
+.dark-theme .navbar-brand {
+    color: #f5f5f5;
+}
+
+.dark-theme .article-card {
+    background-color: #1f2933;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .article-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme h5 {
+    color: #f5f5f5;
+}
+
+.dark-theme button.btn-primary, .dark-theme .article-card button {
+    background-color: #ff9800;
+    color: #111111;
+}
+
+.dark-theme button.btn-primary:hover, .dark-theme .article-card button:hover {
+    background-color: #fb8c00;
+}
+
+.dark-theme footer {
+    background-color: #1f2933;
+    color: #b0bec5;
+}
+
+.dark-theme footer a {
+    color: #f5f5f5;
+}
+
+/* Read More Button Position */
+.card-body button {
+    margin-top: 10px;
+}
+
+/* General dark mode settings */
+.dark-theme body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-theme header, .dark-theme footer {
+    background-color: #1f2933;
+    color: #e0e0e0;
+}
+
+/* Modal specific dark mode styles */
+.dark-theme .modal-content {
+    background-color: #1f2933;
+    color: #e0e0e0;
+}
+
+/* Other dark theme adjustments */
+.dark-theme .article-card {
+    background-color: #2a2a2a;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Transition for Smooth Theme Change */
+html {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

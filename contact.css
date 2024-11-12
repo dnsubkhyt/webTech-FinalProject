@@ -1,0 +1,230 @@
+/* Basic Styling for the Contact Page */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container for layout adjustment */
+.container {
+    max-width: 960px;
+}
+
+/* Allow the main content to grow and take available space */
+main {
+    flex-grow: 1;
+}
+
+/* Header and Footer Styling */
+header, footer {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Footer padding and alignment */
+footer {
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Navbar Brand Styling */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Dark Mode Toggle Container Styling */
+.toggle-container {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Checkbox Styling for Dark Mode Toggle */
+.checkbox {
+    opacity: 0;
+    position: absolute;
+    display: none !important;
+}
+
+/* Dark Mode Toggle Label Styling */
+.checkbox-label {
+    background-color: #111;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling for Dark Mode Toggle Ball Animation */
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+/* Move Ball on Checkbox Check */
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+}
+
+/* Sun and Moon Icons for Dark Mode Toggle */
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+/* Styling for Contact Form Inputs */
+form .form-control {
+    border-radius: 5px;
+}
+
+/* Submit Button Styling */
+button[type="submit"] {
+    background-color: #0066cc;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+}
+
+/* Submit Button Hover Effect */
+button[type="submit"]:hover {
+    background-color: #004d99;
+}
+
+/* Dark and Light Theme Variables */
+.dark-theme {
+    --bg-color: #1a1a1a;
+    --text-color: #f1f1f1;
+}
+
+.light-theme {
+    --bg-color: #f1f1f1;
+    --text-color: #1a1a1a;
+}
+
+/* Dark Mode Header and Footer Colors */
+.dark-theme header, .dark-theme footer {
+    background-color: #1a1a1a;
+    color: #f1c40f;
+}
+
+/* Dark Theme Submit Button Colors */
+.dark-theme button[type="submit"] {
+    background-color: #f39c12;
+    color: #111;
+}
+
+/* Dark Theme Submit Button Hover Effect */
+.dark-theme button[type="submit"]:hover {
+    background-color: #e67e22;
+}
+
+/* Smooth Transition for Background and Text Color */
+html {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Center Navbar Links */
+.navbar-nav {
+    margin: 0 auto;
+}
+
+/* Responsive Navbar Adjustments for Smaller Screens */
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin: 0;
+    }
+
+    .toggle-container {
+        margin-left: auto;
+    }
+}
+
+/* Additional Styling for Contact Page */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Define Light and Dark Theme Background and Text Colors */
+:root.light-theme {
+    --bg-color: #f5f7fa;
+    --text-color: #333;
+}
+
+:root.dark-theme {
+    --bg-color: #1a1a1a;
+    --text-color: #f1f1f1;
+}
+
+/* Apply Theme Colors to Body, Header, and Footer in Dark Mode */
+.dark-theme body, .dark-theme header, .dark-theme footer {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Dark and Light Mode for Header and Footer Colors */
+header, footer {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Dark Mode Header and Footer Styling */
+.dark-theme header, .dark-theme footer {
+    background-color: #1a1a1a;
+    color: #f1c40f;
+}
+
+/* Submit Button Base Styling */
+button[type="submit"] {
+    background-color: #0066cc;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit Button Hover Effect for Light Mode */
+button[type="submit"]:hover {
+    background-color: #004d99;
+}
+
+/* Dark Mode Colors for Submit Button */
+.dark-theme button[type="submit"] {
+    background-color: #f39c12;
+    color: #111;
+}
+
+/* Dark Mode Hover Effect for Submit Button */
+.dark-theme button[type="submit"]:hover {
+    background-color: #e67e22;
+}
+
+/* General Styling Adjustments */
+html {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
